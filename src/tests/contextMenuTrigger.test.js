@@ -41,8 +41,4 @@ describe('<ContextMenuTrigger /> Test', () => {
     component = setup({ attributes: { 'aria-label': 'Trigger' } });
     expect(component.find('.menu-trigger').prop('aria-label')).toBe('Trigger');
   });
-
-  it('Should defaultProps disable defined', () => {
-    expect(ContextMenuTrigger.defaultProps.disable).toBeDefined();
-  });
 });

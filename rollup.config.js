@@ -16,6 +16,7 @@ export default {
       file: pkg.main,
       format: 'cjs',
       sourcemap: false,
+      preserveModules: false,
       globals: {
         react: 'React',
         'react-dom': 'ReactDOM'
@@ -25,6 +26,7 @@ export default {
       file: pkg.module,
       format: 'es',
       sourcemap: false,
+      preserveModules: false,
       globals: {
         react: 'React',
         'react-dom': 'ReactDOM'

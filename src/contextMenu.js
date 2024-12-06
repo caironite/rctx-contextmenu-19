@@ -8,8 +8,18 @@ import AnimateComponent from './animateComponent';
 import { throttle } from './helper';
 
 function ContextMenu({
-  children, id, appendTo, hideOnLeave, onMouseLeave, onHide, onShow, preventHideOnScroll,
-  preventHideOnResize, attributes, className, animation
+  children,
+  id,
+  appendTo = null,
+  hideOnLeave = false,
+  onMouseLeave = () => null,
+  onHide = () => null,
+  onShow = () => null,
+  preventHideOnScroll = false,
+  preventHideOnResize = false,
+  attributes = {},
+  className = '',
+  animation = 'fade'
 }) {
   const contextMenuEl = useRef(null);
   const [isVisible, setVisible] = useState(false);
@@ -109,8 +119,11 @@ function ContextMenu({
     }
   }, [isVisible, clientPosition]);
 
-  const childrenWithProps = React.Children
-    .map(children, child => React.cloneElement(child, { id }));
+  const childrenWithProps = React.Children.map(children, child =>
+    React.isValidElement(child) && child.type !== React.Fragment
+      ? React.cloneElement(child, { id })
+      : child
+  );
 
   const ContextComponent = () => (
     <div
@@ -156,16 +169,3 @@ function ContextMenu({
 }
 
 export default ContextMenu;
-
-ContextMenu.defaultProps = {
-  appendTo: null,
-  hideOnLeave: false,
-  preventHideOnResize: false,
-  preventHideOnScroll: false,
-  attributes: {},
-  className: '',
-  animation: 'fade',
-  onMouseLeave: () => null,
-  onHide: () => null,
-  onShow: () => null
-};

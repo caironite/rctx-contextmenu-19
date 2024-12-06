@@ -3,7 +3,12 @@ import classnames from 'classnames';
 import { callShowEvent, callHideEvent } from './registerEvent';
 
 function ContextMenuTrigger({
-  children, id, disableWhileShiftPressed, attributes, disable, className
+  children,
+  id,
+  disableWhileShiftPressed = false,
+  attributes = {},
+  disable = false,
+  className = ''
 }) {
   const menuTrigger = useRef(null);
 
@@ -41,11 +46,3 @@ function ContextMenuTrigger({
 }
 
 export default ContextMenuTrigger;
-
-ContextMenuTrigger.defaultProps = {
-  attributes: {},
-  disable: false,
-  renderTag: 'div',
-  disableWhileShiftPressed: false,
-  className: ''
-};

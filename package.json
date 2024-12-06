@@ -1,8 +1,8 @@
 {
-  "name": "rctx-contextmenu",
-  "version": "1.4.1",
-  "description": "Contextmenu for react",
-  "repository": "reachtokish/rctx-contextmenu",
+  "name": "react-context-menu-19",
+  "version": "1.0.0",
+  "description": "Context menu for React v19",
+  "repository": "caironite/react-context-menu-19",
   "author": "reachtokish <patra.kishore65@gmail.com>",
   "license": "MIT",
   "private": false,
@@ -10,12 +10,12 @@
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
   "typings": "src/index.d.ts",
-  "homepage": "https://reachtokish.github.io/rctx-contextmenu",
+  "homepage": "https://github.com/caironite/react-context-menu-19",
   "bugs": {
-    "url": "https://github.com/reachtokish/rctx-contextmenu/issues"
+    "url": "https://github.com/caironite/react-context-menu-19/issues"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=20"
   },
   "scripts": {
     "clean": "rimraf ./dist",
@@ -37,9 +37,9 @@
     "rollup-plugin-postcss": "4.0"
   },
   "devDependencies": {
-    "@svgr/rollup": "^6.5.1",
+    "@svgr/rollup": "^8.1.0",
     "@types/jest": "^29.4.0",
-    "autoprefixer": "9.0.0",
+    "autoprefixer": "10.4.20",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^29.5.0",
@@ -49,25 +49,25 @@
     "babel-preset-stage-0": "^6.24.1",
     "cross-env": "^7.0.3",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.7",
-    "eslint": "^8.36.0",
+    "enzyme-adapter-react-16": "^1.15.8",
+    "eslint": "^9.16.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
-    "gh-pages": "^5.0.0",
+    "gh-pages": "^6.2.0",
     "jest": "^29.5.0",
     "jest-enzyme": "^7.1.2",
-    "node-sass": "^8.0.0",
+    "node-sass": "^9.0.0",
     "parcel-bundler": "^1.12.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-test-renderer": "^18.2.0",
-    "rollup": "3.19.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-test-renderer": "^19.0.0",
+    "rollup": "4.28.1",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-css-only": "^4.3.0",
-    "rollup-plugin-node-externals": "^5.1.2",
+    "rollup-plugin-node-externals": "^7.1.3",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-replace": "^2.2.0",
@@ -105,15 +105,6 @@
   },
   "keywords": [
     "react",
-    "contextmenu",
-    "react-contextmenu",
-    "rctx-contextmenu",
-    "react-component",
-    "right click",
-    "react context menu",
-    "react right click menu",
-    "right click menu",
-    "window right click menu",
-    "browser right click menu"
+    "context menu"
   ]
 }

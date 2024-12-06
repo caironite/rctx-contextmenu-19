@@ -3,7 +3,10 @@ import classnames from 'classnames';
 import ContextMenuItem from './contextMenuItem';
 
 function Submenu({
-  children, title, attributes, className
+  children,
+  title = 'Sub Menu',
+  attributes = {},
+  className = ''
 }) {
   const [submenuStyle, setSubmenuStyle] = useState(null);
   const submenuEl = useRef(null);
@@ -74,8 +77,3 @@ function Submenu({
 }
 
 export default Submenu;
-
-Submenu.defaultProps = {
-  title: 'Sub Menu',
-  className: ''
-};

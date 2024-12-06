@@ -3,7 +3,12 @@ import classnames from 'classnames';
 import { callHideEvent } from './registerEvent';
 
 function ContextMenuItem({
-  children, onClick, disabled, preventClose, attributes, className
+  children,
+  onClick = () => null,
+  disabled = false,
+  preventClose = false,
+  attributes = {},
+  className = ''
 }) {
   const contextMenuItem = useRef(null);
 
@@ -35,12 +40,3 @@ function ContextMenuItem({
 }
 
 export default ContextMenuItem;
-
-ContextMenuItem.defaultProps = {
-  disabled: false,
-  preventClose: false,
-  attributes: {},
-  className: '',
-  onClick: () => null,
-  onItemHover: () => null
-};
